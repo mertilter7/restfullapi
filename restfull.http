@@ -1,0 +1,42 @@
+@BASE_URL = http://localhost:3000/api
+
+GET {{BASE_URL}}
+
+###
+GET {{BASE_URL}}/users
+
+###
+GET {{BASE_URL}}/users/31
+
+###
+POST {{BASE_URL}}/users
+Content-Type: application/json
+
+{
+    "isim" : "kral",
+    "email" : "sess@hotmail.com",
+    "userName" : "kinq",
+    "sifre" : "123456"
+}
+
+###
+POST {{BASE_URL}}/users/signIn
+Content-Type: application/json
+
+{
+    "email" : "sess@hotmail.com",   
+    "sifre" : "123456"
+}
+###
+PATCH {{BASE_URL}}/users/605bf16960d4ca2908d17ceb
+Content-Type: application/json
+
+{
+    "isim" : "EVET",   
+   "password" : "S1asdasdasd213asdasdasdasdasd"
+}
+
+###
+
+DELETE {{BASE_URL}}/users/605bed3a329b924398a3305d
+Content-Type: application/json
